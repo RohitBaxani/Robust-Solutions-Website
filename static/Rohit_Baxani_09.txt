@@ -1,0 +1,88 @@
+Question 1:
+
+#include <iostream>
+using namespace std;
+
+int q[10],n=10,front=-1,back=-1;
+
+void push(){
+    int value;
+    if(back==n-1)
+    cout<<"Queue is full"<<endl;
+    else{
+        if(front==-1)
+        front=0;
+        cout<<"Insert element: "<<endl;
+        cin>>value;
+        back++;
+        q[back]=value;
+    }
+}
+
+void pop(){
+    if(front==-1 || front>back){
+        cout<<"Quere is empty";
+        return;
+    }
+    else{
+        cout<<"Deleted Element from queue"<<q[front]<<endl;
+        front++;
+    }
+}
+struct EventRequest{
+    char EventType;
+    int RetryCount;
+};
+
+struct EventStatus{
+    char EventType;
+    char StatusType;
+    short RetryCount;
+};
+
+int main() {
+    cout<<"This is the Push Function"
+    push();
+    cout<<"This is the Pop Function"
+    pop();
+
+    return 0;
+}
+
+
+Question 2:
+
+#include <iostream>
+using namespace std;
+
+void check(int* arr,int gift){
+    int a=0;
+    if(a!=gift){
+    for(int i=0;i<sizeof(arr);i++)
+    {
+        a=arr[i];
+        if(a==gift){
+            cout<<"Customer can utilize full value of Coupon";
+            return true;
+        }
+        else if(a!=gift){
+            a=a+arr[i+1];
+            break;
+        }
+        else{
+            break;
+        }
+    }
+}
+else{
+    cout<<"Customer cannot utilize the full value of coupon"<<a<<endl;
+    return false;
+}
+}
+
+int main() {
+    int arr[]={100,5,10,15,20,25,30,40};
+    int gift=100;
+    check(arr,gift);
+    return 0;
+}

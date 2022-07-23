@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact
+{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0">
+    <img class="d-block w-100" src="/static/13.jfig.jpg" alt="...">
+</div>
+<div class="container-fluid">
+    <style>
+        h1{
+            margin-top: -45px;
+            font-weight: bold;
+            color:#674741;
+            font-opacity: 0.5;
+        }
+    </style>
+    <h1 class="text-center">Contact Us</h1>
+    <form method="post">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" class="form-control" id="firstname" name="lastname" placeholder="Enter your First Name">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your Last Name">
+          </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="age" class="form-control" id="age" placeholder="Enter your Age">
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter your location">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your Mail">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" placeholder="Enter your Number">
+        </div>
+        <div class="form-group">
+          <label for="desc">Tell us Why you want to Contact Us</label>
+          <textarea class="form-control" id="desc" name-"desc" rows="3"></textarea>
+        </div>
+        <button type="button" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+{% endblock body%}
