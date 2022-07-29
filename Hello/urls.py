@@ -18,7 +18,7 @@ from django.urls import path, include
 
 admin.site.site_header="ROBUST SOLUTIONS ADMIN"
 admin.site.site_title="ROBUST SOLUTIONS PORTAL"
-admin.site.index_title="Welcome to Robust Solutio"
+admin.site.index_title="Welcome to Robust Solutions"
 
 urlpatterns = [
     path('admin/', admin.site.urls),

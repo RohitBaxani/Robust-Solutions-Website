@@ -16,10 +16,11 @@ Contact
         }
     </style>
     <h1 class="text-center">Contact Us</h1>
-    <form method="post">
+    <form method="post" action="/contact">
         <div class="form-group">
+        {% csrf_token %}
           <label for="firstname">First Name</label>
-          <input type="text" class="form-control" id="firstname" name="lastname" placeholder="Enter your First Name">
+          <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your First Name">
         </div>
         <div class="form-group">
             <label for="lastname">Last Name</label>
@@ -27,25 +28,25 @@ Contact
           </div>
         <div class="form-group">
             <label for="age">Age</label>
-            <input type="age" class="form-control" id="age" placeholder="Enter your Age">
+            <input type="age" class="form-control" id="age" name="age" placeholder="Enter your Age">
         </div>
         <div class="form-group">
             <label for="location">Location</label>
-            <input type="text" class="form-control" id="location" placeholder="Enter your location">
+            <input type="text" class="form-control" id="location" name="location" placeholder="Enter your location">
         </div>
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your Mail">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Mail">
         </div>
         <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="phone" class="form-control" id="phone" placeholder="Enter your Number">
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Number">
         </div>
         <div class="form-group">
           <label for="desc">Tell us Why you want to Contact Us</label>
-          <textarea class="form-control" id="desc" name-"desc" rows="3"></textarea>
+          <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
         </div>
-        <button type="button" class="btn btn-dark">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
     </form>
 </div>
 {% endblock body%}
